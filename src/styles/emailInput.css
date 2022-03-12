@@ -1,0 +1,113 @@
+.email-container{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 100px;
+}
+.tags-input {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 50px;
+    padding: 5px;
+    border: 1px solid #ededed;
+    border-radius: 10px;
+    background-color: white;
+    align-items: center;
+    width: 500px;
+    overflow: auto;
+}
+.email-input {
+    border: 0;
+    outline: 0;
+}
+.email-input:focus{
+    outline: none;
+}
+button.delete{
+    position: absolute;
+    top: 6px;
+    display: inline-block;
+    margin-left: 5px;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0,0,0,.3);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    user-select: none;
+}
+button.delete:after{
+    content: 'X';
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center; 
+}
+button.error{
+    position: absolute;
+    top: 6px;
+    display: inline-block;
+    margin-left: 5px;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(241, 81, 95, 1);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    user-select: none;
+  }
+  button.error:after{
+      content: '!';
+      width: 15px;
+      height: 15px;
+      line-height: 15px;
+      text-align: center; 
+  }
+.tag{
+    position: relative;
+    align-items: center;
+    height: 22px;
+    margin-right: 5px;
+    padding: 5px 8px;
+    background: #cecece;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    padding-right: 30px;
+}
+
+.tag.error {
+    background-color: #f3b7bd;
+}
+.emails-box{
+    background-color: white;
+    max-height: 300px;
+    overflow-y: scroll;
+    border-radius: 5px;
+    margin-top: -5px;
+    width: 350px;
+}
+.emails-box ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+} 
+
+.emails-box ul li {
+    text-align: left;
+    padding: 10px 30px;
+}
+.emails-box ul li:hover{
+    background-color: #EFF5F9;
+}
+  
