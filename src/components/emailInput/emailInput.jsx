@@ -1,4 +1,4 @@
-import React,{ useState, useEffect, useRef } from 'react';
+import React,{ useState, useEffect } from 'react';
 import '../../styles/emailInput.css';
 import emails from './emailListMock';
 
@@ -13,7 +13,6 @@ const EmailInput = () => {
     const [x, setX] = useState()
     const update = (e) => {
         let bounds = document.getElementById('email-input').getBoundingClientRect();
-        console.log(e.clientX)
         setX(e.clientX - bounds.left)
     }
 
@@ -75,7 +74,6 @@ const EmailInput = () => {
                 value={currentEmail}
                 onChange={handleInputChange}
                 onKeyDown={handleKeyDown}
-                id='email-input'
             />           
         </div>
         <div className='emails-box' id='emails-box' style={{marginLeft: x}}> 

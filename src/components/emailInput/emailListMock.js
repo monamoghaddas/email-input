@@ -1,4 +1,4 @@
-export default [
+const emails = [
     "ebrekke@gmail.com",
     "rigoberto.weimann@schuppe.com",
     "ijakubowski@barton.com",
@@ -1000,3 +1000,4 @@ export default [
     "precious62@jacobi.com",
     "nicola.reichel@yahoo.com",
 ]
+export default emails;
