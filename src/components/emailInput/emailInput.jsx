@@ -2,8 +2,8 @@ import React,{ useState, useEffect, useRef } from 'react';
 import '../../styles/emailInput.css';
 import emails from './emailListMock';
 
-const Tag = props => <span className={`tag${props.isValid ? '': ' error'}`} {...props} />
-const Delete = props => <button className={`${props.isValid ? 'delete': 'error'}`} {...props} />
+const Tag = ({isValid, ...restProps}) => <span className={`tag${isValid ? '': ' error'}`} {...restProps}/>
+const Delete = ({isValid, ...restProps}) => <button className={`${isValid ? 'delete': 'error'}`} {...restProps}/>
 
 const EmailInput = () => {
 
@@ -12,8 +12,9 @@ const EmailInput = () => {
 
     const [x, setX] = useState()
     const update = (e) => {
-        let bounds = document.getElementById('email-container').getBoundingClientRect();
-      setX(e.clientX - bounds.left)
+        let bounds = document.getElementById('email-input').getBoundingClientRect();
+        console.log(e.clientX)
+        setX(e.clientX - bounds.left)
     }
 
     useEffect(
@@ -59,7 +60,7 @@ const EmailInput = () => {
 
     return ( 
         <div className='email-container' id='email-container'>
-        <div className="tags-input">
+        <div className="tags-input" id="tags-input">
             {selectedEmails.map((email, index) => (
                 <Tag key={index} isValid={validateEmail(email)}>
                     {email}

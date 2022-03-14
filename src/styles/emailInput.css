@@ -3,6 +3,8 @@
     flex-direction: column;
     position: fixed;
     top: 100px;
+    width: 100%;
+    align-items: center;
 }
 .tags-input {
     display: flex;
